@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.fatec.vamosVencer.entity.Disciplina;
 
+/**
+ * Interface DisciplinaRepository
+ */
 @Repository
 public interface DisciplinaRepository extends JpaRepository<Disciplina, Integer> {
 }

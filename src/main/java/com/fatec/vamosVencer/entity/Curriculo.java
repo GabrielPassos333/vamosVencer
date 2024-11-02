@@ -2,6 +2,9 @@ package com.fatec.vamosVencer.entity;
 
 import jakarta.persistence.*;
 
+/**
+ * Entidade Curriculo
+ */
 @Entity
 public class Curriculo {
 

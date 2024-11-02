@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.fatec.vamosVencer.entity.Professor;
 
+/**
+ * Interface ProfessorRepository
+ */
 @Repository
 public interface ProfessorRepository extends JpaRepository<Professor, Integer> {
 }
