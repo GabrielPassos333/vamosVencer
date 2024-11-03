@@ -1,0 +1,43 @@
+package com.fatec.vamosVencer.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+@Entity
+public class Agenda {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer codAgenda;
+    private LocalDate dataAgendada;
+    private LocalTime hora;
+
+    // Getters e Setters
+    public Integer getCodAgenda() {
+        return codAgenda;
+    }
+
+    public void setCodAgenda(Integer codAgenda) {
+        this.codAgenda = codAgenda;
+    }
+
+    public LocalDate getDataAgendada() {
+        return dataAgendada;
+    }
+
+    public void setDataAgendada(LocalDate dataAgendada) {
+        this.dataAgendada = dataAgendada;
+    }
+
+    public LocalTime getHora() {
+        return hora;
+    }
+
+    public void setHora(LocalTime hora) {
+        this.hora = hora;
+    }
+}
