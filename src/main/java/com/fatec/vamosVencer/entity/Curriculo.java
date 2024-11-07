@@ -3,20 +3,30 @@ package com.fatec.vamosVencer.entity;
 import jakarta.persistence.*;
 
 /**
- * Entidade Curriculo
+ * Classe responsável por representar a entidade Curriculo
  */
 @Entity
 public class Curriculo {
 
+    // Atributos
+    /**
+     * Código do currículo
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codCurriculo;
     private Integer semestreGrade;
 
+    /**
+     * Disciplina
+     */
     @ManyToOne
     @JoinColumn(name = "codDisciplina", nullable = false)
     private Disciplina disciplina;
 
+    /**
+     * Curso
+     */
     @ManyToOne
     @JoinColumn(name = "codCurso", nullable = false)
     private Curso curso;

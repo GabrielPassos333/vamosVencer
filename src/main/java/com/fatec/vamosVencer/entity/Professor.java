@@ -11,9 +11,17 @@ import jakarta.persistence.Id;
 @Entity
 public class Professor {
 
+    // Atributos
+    /**
+     * Matrícula do professor
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer matriculaProfessor;
+
+    /**
+     * Nome do professor
+     */
     private String nomeProfessor;
 
     // Getters e Setters

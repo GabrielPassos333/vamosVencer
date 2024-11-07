@@ -2,25 +2,44 @@ package com.fatec.vamosVencer.entity;
 
 import jakarta.persistence.*;
 
+/**
+ * Classe responsável por representar a entidade Reserva
+ */
 @Entity
 public class Reserva {
 
+    // Atributos
+    /**
+     * Código da reserva
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codReserva;
 
+    /**
+     * Agenda da sala
+     */
     @ManyToOne
     @JoinColumn(name = "codAgendaSala", nullable = false)
     private AgendaSala agendaSala;
 
+    /**
+     * Turma
+     */
     @ManyToOne
     @JoinColumn(name = "codTurma")
     private Turma turma;
 
+    /**
+     * Secretaria
+     */
     @ManyToOne
     @JoinColumn(name = "matriculaSecretaria", nullable = false)
     private Secretaria secretaria;
 
+    /**
+     * Manutenção
+     */
     private Boolean manutencao;
 
     // Getters e Setters

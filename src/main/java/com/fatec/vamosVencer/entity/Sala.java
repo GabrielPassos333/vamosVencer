@@ -5,13 +5,28 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/**
+ * Entidade Sala
+ */
 @Entity
 public class Sala {
 
+    // Atributos
+    /**
+     * Código da sala
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codSala;
+
+    /**
+     * Tipo da sala
+     */
     private String tipo;
+
+    /**
+     * Capacidade da sala
+     */
     private Integer capacidade;
 
     // Getters e Setters

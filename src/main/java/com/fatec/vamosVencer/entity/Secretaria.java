@@ -5,12 +5,23 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/**
+ * Entidade Secretaria
+ */
 @Entity
 public class Secretaria {
 
+    // Atributos
+    /**
+     * Matrícula da secretaria
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer matriculaSecretaria;
+
+    /**
+     * Nome da secretaria
+     */
     private String nomeSecretaria;
 
     // Getters e Setters

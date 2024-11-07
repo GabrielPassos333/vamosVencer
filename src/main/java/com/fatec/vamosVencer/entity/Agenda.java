@@ -7,13 +7,27 @@ import jakarta.persistence.Id;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/**
+ * Classe responsável por representar a entidade Agenda
+ */
 @Entity
 public class Agenda {
 
+    // Atributos
+    /**
+     * Código da agenda
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codAgenda;
+    
+    /**
+     * Data agendada
+     */
     private LocalDate dataAgendada;
+    /**
+     * Hora agendada
+     */
     private LocalTime hora;
 
     // Getters e Setters

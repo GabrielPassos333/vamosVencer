@@ -11,10 +11,17 @@ import jakarta.persistence.Id;
 @Entity
 public class Curso {
     
+    // Atributos
+    /**
+     * Código do curso
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codCurso;
     
+    /**
+     * Nome do curso
+     */
     private String nomeCurso;
 
     // Getters e Setters

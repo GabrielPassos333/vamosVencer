@@ -2,23 +2,42 @@ package com.fatec.vamosVencer.entity;
 
 import jakarta.persistence.*;
 
+/**
+ * Entidade Turma
+ */
 @Entity
 public class Turma {
 
+    // Atributos
+    /**
+     * Código da turma
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codTurma;
 
+    /**
+     * Currículo da turma
+     */
     @ManyToOne
     @JoinColumn(name = "codCurriculo", nullable = false)
     private Curriculo curriculo;
 
+    /**
+     * Professor da turma
+     */
     @ManyToOne
     @JoinColumn(name = "matriculaProfessor", nullable = false)
     private Professor professor;
 
+    /**
+     * Semestre da turma
+     */
     private Integer semestre;
 
+    /**
+     * Ano da turma
+     */
     private Integer ano;
 
     // Getters e Setters
